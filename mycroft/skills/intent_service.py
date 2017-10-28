@@ -231,7 +231,7 @@ class IntentService(object):
                     context_manager=self.context_manager))
                 # TODO - Should Adapt handle this?
                 best_intent['utterance'] = utterance
-            except StopIteration, e:
+            except StopIteration as e:
                 LOG.exception(e)
                 continue
 
@@ -262,7 +262,6 @@ class IntentService(object):
                 start_concept, end_concept, alias_of=alias_of)
 
     def handle_register_intent(self, message):
-        print "Registering: " + str(message.data)
         intent = open_intent_envelope(message)
         self.engine.register_intent_parser(intent)
 
