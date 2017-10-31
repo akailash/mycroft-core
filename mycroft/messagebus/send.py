@@ -40,7 +40,7 @@ def main():
         except BaseException:
             print("Second argument must be a JSON string")
             print("Ex: python -m mycroft.messagebus.send speak "
-                "'{\"utterance\" : \"hello\"}'")
+                  "'{\"utterance\" : \"hello\"}'")
             exit()
     else:
         print("Command line interface to the mycroft-core messagebus.")
@@ -48,7 +48,7 @@ def main():
         print("       python -m mycroft.messagebus.send message JSON-string\n")
         print("Examples: python -m mycroft.messagebus.send mycroft.wifi.start")
         print("Ex: python -m mycroft.messagebus.send speak "
-            "'{\"utterance\" : \"hello\"}'")
+              "'{\"utterance\" : \"hello\"}'")
         exit()
 
     send(messageToSend, dataToSend)
